@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Posts from JSONPlaceholder</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <h1>POST REQUEST</h1>
+ 
+    <!-- Form for submitting new post data -->
+<form id="postForm">
+<div class="mb-3">
+<label for="userId" class="form-label">Enter User ID :</label>
+<input type="text" class="form-control" id="userId" placeholder="User ID" required>
+</div>
+<div class="mb-3">
+<label for="title" class="form-label">Enter Title :</label>
+<input type="text" class="form-control" id="title" placeholder="Title" required>
+</div>
+<div class="mb-3">
+<label for="body" class="form-label">Enter Body :</label>
+<textarea class="form-control" id="body" placeholder="Body" rows="3" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ 
+    <!-- Section to display all post details -->
+<div class="table-container">
+<h2>All Posts</h2>
+<p>Total records found: <span id="recordCount">0</span></p>
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th>Post ID</th>
+<th>User ID</th>
+<th>Title</th>
+<th>Body</th>
+<th>Update</th>
+<th>Delete</th>
+</tr>
+</thead>
+<tbody id="postsTable">
+<!-- Data will be dynamically inserted here -->
+</tbody>
+</table>
+</div>
+ <script src="script.js"> </script>
+ 
+</body>
+</html>
